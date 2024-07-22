@@ -1,1 +1,1 @@
-순서 : "VPC 만들기"
+순서 : "VPC 만들기(VPC)" -> "EC2 만들기(EC2)" -> "S3 만들기(S3)" -> "Lambda 만들기(Lambda)" -> "Glue jobs(ETL jobs)"
