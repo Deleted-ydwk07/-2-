@@ -38,8 +38,35 @@ EC2 터미널 연결하기 (터미널)
 
 EC2 패키지 설치하기 (터미널)
 "터미널"
-1. "sudo su"
-2. 
+1. "sudo su" : "루트 사용자로 전환"
+2. "https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html" : "링크 들어가서 AWS CLI Linux 설치"
+3. "yum install jq -y" : jq 설치
+4. "yum install curl" : curl 설치
+
+S3 버킷 만들기 (Amazon S3 > 버킷)
+"버킷 만들기"
+1. "버킷 이름" : "my-data-s3-<비번호>"
+
+S3 버킷 폴더 만들기 (Amazon S3 > 버킷 > my-data-s3-<비번호>)
+"폴더 만들기'
+1. "폴더 이름" : "data"
+"폴더 만들기"
+2. "폴더 이름" : "script"
+"폴더 만들기"
+3. "폴더 이름" : "output"
+
+S3 버킷 폴더 안에 배포 파일 만들기 (Amazon S3 > 버킷 > my-data-s3-<비번호>)
+"data/"
+1. "data.csv" 업로드 하기
+
+
+
+
+
+
+
+
+
 
 
 
