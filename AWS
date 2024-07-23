@@ -82,23 +82,23 @@ Lambda 함수에서 트리거 생성하기 (Lambda > 함수 > data-function)
 4. "접두사" : "data/"
 5. "접미사" : ".csv"
 
-Lambda 함수에서 제한 시간 1분으로 수정하기 (Lambda > 함수 > data-function)
-"구성" -> "일반 구성" -> "편집"
-1. "제한 시간" : "1분"
-
-Lambda 함수에서 코드 소스 이름 수정하기 (Lambda > 함수 > data-function)
-"코드" -> "코드 소스"
-1. "lambda_function.py" : "data-function.py" 로 이름 수정하기
-
 Lambda 함수에서 코드 소스 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "코드 소스"
 1. "data-function.py" 파일 수정하기
 2. "script_location = 's3://my-data-s3-101/script/script.py'" : "script_location = 's3://my-data-s3-<비번호>/script/script.py'" 이렇게 수정하기
 3. 수정한 파일을 복사하여 Lambda 함수 코드 소스에 붙여넣기
 
+Lambda 함수에서 코드 소스 이름 수정하기 (Lambda > 함수 > data-function)
+"코드" -> "코드 소스"
+1. "lambda_function.py" : "data-function.py" 로 이름 수정하기
+
 Lambda 함수에서 핸들러 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "런타임 설정" -> "편집"
 1. "핸들러" : "<파일 이름>.<함수 이름>"
+
+Lambda 함수에서 제한 시간 1분으로 수정하기 (Lambda > 함수 > data-function)
+"구성" -> "일반 구성" -> "편집"
+1. "제한 시간" : "1분"
 
 Glue job 생성하기 (AWS Glue > Jobs)
 "ETL jobs" -> "Create job" -> "Script editor"
