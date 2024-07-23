@@ -1,1 +1,34 @@
-순서 : "VPC 만들기(VPC)" -> "EC2 만들기(EC2)" -> "S3 만들기(S3)" -> "Lambda 만들기(Lambda)" -> "Glue jobs(ETL jobs)"
+VPC 만들기 (VPC)
+"VPC 생성"
+1. "생성할 리소스" : "VPC 등"
+2. "이름 태그 자동 생성" : "자동 생성"
+3. "가용 영역(AZ) 수" : "2", "첫 번째 가용 영역" : "ap-northeast-2a", "두 번째 가용 영역" : "ap-northeast-2b"
+4. "퍼블릭 서브넷 수" : "2", "프라이빗 서브넷 수" : 2
+5. "NAT 게이트웨이($)" : "1개의 AZ에서"
+6. "VPC 엔드포인트" : "없음"
+
+역할 만들기 (IAM > 역할)
+"역할 생성"
+1. "신뢰할 수 있는 엔터티 유형" : "AWS 서비스"
+2. "서비스 또는 사용 사례" : "EC2", "지정된 서비스에 대한 사용 사례를 선택합니다. 사용 사례" : "EC2"
+3. "권한 정책" : "AdministratorAccess"
+4. "역할 이름" : "AdministratorAccess-EC2-Role"
+
+EC2 만들기 (인스턴스)
+"인스턴스 시작"
+1. "이름" : "my-bastion"
+2. "Amazon Machine Image(AMI)" : "Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type"
+3. "인스턴스 유형" : "t2.micro"
+4. "새 키 페어 생성"
+5. "네트워크 설정" : "편집", "VPC" : <아까 만든 VPC>
+6. "서브넷" : "public1-ap-northeast-2a"
+7. "퍼블릭 IP 자동 할당" : "활성화"
+8. "방화벽(보안 그룹)" : "보안 그룹 생성"
+9. "IAM 인스턴스 프로파일" : ""AdministratorAccess-EC2-Role"
+
+탄력적 IP 만들기 (탄력적 IP 주소)
+"탄력적 IP 주소 할당"
+1. "탄력적 IP 주소가 할당되었습니다." : "이 탄력적 IP 주소 연결"
+2. "인스턴스" : <아까 만든 EC2>
+3. "프라이빗 IP 주소" : <아까 만든 EC2 프라이빗 IP 주소>
+
