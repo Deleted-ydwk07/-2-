@@ -150,8 +150,20 @@ Crawlers 생성하기 (AWS Glue > Crawlers)
 8. "Table name prefix" : "convert_"
 9. "Tables" 생성 확인하기
 
-
-
+Athena 생성하기 (Amazon Athena > 쿼리 편집기)
+"설정" -> "관리"
+1. "Location of query result" : "s3://my-data-s3-<비번호>/man/"
+2. "편집기"에 아래 내용을 복사하고 붙여넣는다
+select count(*) from convert_output
+where sex='boy' and year between '1932' and '1967'
+3. "실행"을 누른다
+4. "결과" : "36000"
+5. "Location of query result" : "s3://my-data-s3-<비번호>/woman/"
+6. "편집기"에 아래 내용을 복사하고 붙여넣는다
+select count(*) from convert_output
+where sex='girl' and year like '20%'
+7. "실행"을 누른다
+8. "결과" : "9000"
 
 
 
