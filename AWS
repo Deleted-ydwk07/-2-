@@ -217,7 +217,17 @@ S3 버킷에서 EventBridge 활성화 하기 (Amazon S3 > 버킷 > my-data-s3-<�
 "속성"
 1. "Amazon EventBridge" : "활성화"
 
-
+메시지 폴링하기 (Amazon Athena > 쿼리 편집기) ("편집기", "최근 쿼리", "저장된 쿼리", "설정")
+"설정" -> "관리"
+1. "Location of query result" -> "s3://my-data-s3-5321/man/"
+"편집기"
+2. 아래 내용을 복사하고 붙여넣는다
+select count(*) from convert_output
+where sex='boy' and year between '1932' and '1967'
+3. "다시 실행" 누르기
+4. "SQS"에 접속하여 (Amazon SQS > 대기열 > my-queue)
+5. "메시지 전송 및 수신" 누르기 (Amazon SQS > 대기열 > my-queue > 메시지 전송 및 수신)
+6. "메시지 폴링" 누르기
 
 
 
