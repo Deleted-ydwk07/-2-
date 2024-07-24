@@ -201,7 +201,7 @@ EventBridge 생성하기 (Amazon EventBridge > 규칙)
 {
   "source": ["aws.s3"],
   "detail-type": ["Object Created"],
-  "detaiol": {
+  "detail": {
     "bucket": {
       "name": ["my-data-s3-<비번호>"]
     },
