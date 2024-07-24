@@ -246,19 +246,27 @@ where sex='boy' and year between '1932' and '1967'
 대시보드, 지표 생성하기 (CloudWatch > Dashboards)
 "대시보드 생성"
 1. "대시보드 이름" : "my-dashboard"
+2. "데이터 유형" : "지표"
+3. "위젯 유형" : "행"
+4. "FunctionName" : "data-function", "리소스 (Resource)" : "data-function", "지표 이름" : "ConcurrentExecutions" 체크
+5. "위젯 생성" 누르기
+6. "..." 세로로 되있는거 누르기
+7. "편집" 누르기
+8. "통계" : "평균", "기간" : "1분"
+9. "ConcurrentExecutions" 마우스 갖다 대기
+10. "제목 편집" 누르기
+11. "ConcurrentExecutions"을 "Lambda_Execution"으로 수정하기
+12. "저장" 누르기
+
+지표 생성하기 (CloudWatch > Dashboards > my-dashboard)
+"+" 누르기
+1. "데이터 유형" : "지표"
 2. "위젯 유형" : "행"
-3. "FunctionName" : "data-function", "리소스 (Resource)" : "data-function", "지표 이름" : "ConcurrentExecutions" 체크
+3. "QueueName" : "my-queue", "지표 이름" : "NumberOfMessagesReceived"
 4. "위젯 생성" 누르기
 5. "..." 세로로 되있는거 누르기
 6. "편집" 누르기
 7. "통계" : "평균", "기간" : "1분"
-8. "ConcurrentExecutions" 마우스 갖다 대기
-9. "제목 편집" 누르기
-10. "ConcurrentExecutions"을 "Lambda_Execution"으로 수정하기
-11. "저장" 누르기
-
-
-
 
 
 
