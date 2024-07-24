@@ -164,7 +164,7 @@ select count(*) from convert_output
 where sex='girl' and year like '20%'
 7. "실행"을 누른다
 8. "결과" : "9000"
-
+9. "S3"에 들어가서 "man"과 "woman" 폴더 생성 확인하기
 
 
 
