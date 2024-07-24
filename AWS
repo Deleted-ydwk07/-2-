@@ -199,11 +199,11 @@ EventBridge 생성하기 (Amazon EventBridge > 규칙)
 3. "방법" : "사용자 지정 패턴(JSON 편집기)"
 4. "이벤트 패턴" : 아래 내용을 복사하고 붙여넣는다
 {
-  "source": ["aws-s3"],
+  "source": ["aws.s3"],
   "detail-type": ["Object Created"],
   "detaiol": {
     "bucket": {
-      "name": ["my-data-s3-5321"]
+      "name": ["my-data-s3-<비번호>"]
     },
     "object": {
       "key" : [{"prefix" : "man/"}, {"prefix" : "woman/"}]
