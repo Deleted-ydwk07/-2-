@@ -128,7 +128,7 @@ Glue job 생성하기 ("Script", "Job details", "Runs", "Data quality", "Schedul
 3. "Script filename" : "script.py"
 4. "Script path" : "s3://my-data-s3-<비번호>/script/"
 
-Glue 생성하기 (AWS Glue > Databases)
+Database 생성하기 (AWS Glue > Databases)
 "Add database"
 1. "Name" : "my-database"
 
