@@ -229,7 +229,33 @@ where sex='boy' and year between '1932' and '1967'
 5. "메시지 전송 및 수신" 누르기 (Amazon SQS > 대기열 > my-queue > 메시지 전송 및 수신)
 6. "메시지 폴링" 누르기
 
+대시보드 생성하기 (CloudWatch > Dashboards)
+"대시보드 생성"
+1. "대시보드 이름" : "my-dashboard"
+2. "위젯 유형" : "행"
+3. "FunctionName" : "data-function", "리소스 (Resource)" : "data-function", "지표 이름" : "ConcurrentExecutions" 체크
+4. "위젯 생성" 누르기
+5. "..." 세로로 되있는거 누르기
+6. "편집" 누르기
+7. "통계" : "평균", "기간" : "1분"
+8. "ConcurrentExecutions" 마우스 갖다 대기
+9. "제목 편집" 누르기
+10. "ConcurrentExecutions"을 "Lambda_Execution"으로 수정하기
+11. "저장" 누르기
 
+대시보드, 지표 생성하기 (CloudWatch > Dashboards)
+"대시보드 생성"
+1. "대시보드 이름" : "my-dashboard"
+2. "위젯 유형" : "행"
+3. "FunctionName" : "data-function", "리소스 (Resource)" : "data-function", "지표 이름" : "ConcurrentExecutions" 체크
+4. "위젯 생성" 누르기
+5. "..." 세로로 되있는거 누르기
+6. "편집" 누르기
+7. "통계" : "평균", "기간" : "1분"
+8. "ConcurrentExecutions" 마우스 갖다 대기
+9. "제목 편집" 누르기
+10. "ConcurrentExecutions"을 "Lambda_Execution"으로 수정하기
+11. "저장" 누르기
 
 
 
