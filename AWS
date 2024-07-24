@@ -85,6 +85,10 @@ Lambda 함수에서 트리거 생성하기 (Lambda > 함수 > data-function)
 4. "접두사" : "data/"
 5. "접미사" : ".csv"
 
+Lambda 함수에서 제한 시간 1분으로 수정하기 (Lambda > 함수 > data-function)
+"구성" -> "일반 구성" -> "편집"
+1. "제한 시간" : "1분"
+
 Lambda 함수에서 배포파일 코드 소스 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "코드 소스"
 1. "data-function.py" 파일 수정하기
@@ -99,9 +103,25 @@ Lambda 함수에서 핸들러 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "런타임 설정" -> "편집"
 1. "핸들러" : "<파일 이름>.<함수 이름>"
 
-Lambda 함수에서 제한 시간 1분으로 수정하기 (Lambda > 함수 > data-function)
-"구성" -> "일반 구성" -> "편집"
-1. "제한 시간" : "1분"
+Lambda 함수에서 테스트 이벤트 생성하기 (Lambda > 함수 > data-function)
+"테스트"
+1. "이벤트 작업 테스트" : "새 이벤트 생성"
+2. "이벤트 이름" : 아무거나
+3. "이벤트 JSON" : 아래내용을 복사하고 붙여넣는다
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "my-data-s3-5321"
+        },
+        "object": {
+          "key": "data/data.csv"
+        }
+      }
+    }
+  ]
+}
 
 Glue job 역할 생성하기 (IAM > 역할)
 "역할 생성"
