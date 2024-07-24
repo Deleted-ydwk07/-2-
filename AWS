@@ -253,10 +253,11 @@ where sex='boy' and year between '1932' and '1967'
 6. "..." 세로로 되있는거 누르기
 7. "편집" 누르기
 8. "통계" : "평균", "기간" : "1분"
-9. "ConcurrentExecutions" 마우스 갖다 대기
-10. "제목 편집" 누르기
-11. "ConcurrentExecutions"을 "Lambda_Execution"으로 수정하기
-12. "저장" 누르기
+9. "위젯 업데이트"
+10. "ConcurrentExecutions" 마우스 갖다 대기
+11. "제목 편집" 누르기
+12. "ConcurrentExecutions"를 "Lambda_Execution"으로 수정하기
+13. "저장" 누르기
 
 지표 생성하기 (CloudWatch > Dashboards > my-dashboard)
 "+" 누르기
@@ -267,6 +268,11 @@ where sex='boy' and year between '1932' and '1967'
 5. "..." 세로로 되있는거 누르기
 6. "편집" 누르기
 7. "통계" : "평균", "기간" : "1분"
+8. "위젯 업데이트"
+9. "NumberOfMessagesReceived" 마우스 갖다 대기
+10. "제목 편집" 누르기
+11. "NumberOfMessagesReceived"를 "SQS_Received"로 수정하기
+12. "저장" 누르기
 
 
 
