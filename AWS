@@ -142,6 +142,7 @@ Crawlers 생성하기 (AWS Glue > Crawlers)
 6. "Existing IAM role" : "AdministratorAccess-Glue-Role"
 7. "Target database" : "my-database"
 8. "Table name prefix" : "convert_"
+9. "Tables" 생성 확인하기
 
 
 
