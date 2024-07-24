@@ -166,6 +166,35 @@ where sex='girl' and year like '20%'
 8. "결과" : "9000"
 9. "S3"에 들어가서 "man"과 "woman" 폴더 생성 확인하기
 
+SQS 생성하기 (Amazon SQS > 대기열)
+"대기열 생성"
+1. "이름" : "my-queue"
+2. "URL" 생성 확인하기
+
+EventBridge 생성하기 (Amazon EventBridge > 규칙)
+"규칙 생성"
+1. "이름" : "s3-upload-rule"
+2. "규칙 유형" : "이벤트 패턴이 있는 규칙"
+3. "방법" : "사용자 지정 패턴(JSON 편집기)"
+4. "이벤트 패턴" : 아래 내용을 복사하고 붙여넣는다
+{
+  "source": ["aws-s3"],
+  "detail-type": ["Object Created"],
+  "detaiol": {
+    "bucket": {
+      "name": ["my-data-s3-5321"]
+    },
+    "object": {
+      "key" : [{"prefix" : "man/"}, {"prefix" : "woman/"}]
+    }
+  }
+}
+5. "대상 선택" : "SQS 대기열"
+6. "대기열" : "my-queue"
+
+S3 버킷에서 EventBridge 활성화 하기 (Amazon S3 > 버킷 > my-data-s3-<비번호>), ("객체", "속성", "권한", "지표", "관리", "액세스 지점")
+"속성"
+1. "Amazon EventBridge" : "활성화"
 
 
 
