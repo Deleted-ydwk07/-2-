@@ -7,10 +7,10 @@ VPC 생성하기 (VPC)
 5. "NAT 게이트웨이($)" : "1개의 AZ에서"
 6. "VPC 엔드포인트" : "없음"
 
-역할 생성하기 (IAM > 역할)
+EC2 역할 생성하기 (IAM > 역할)
 "역할 생성"
 1. "신뢰할 수 있는 엔터티 유형" : "AWS 서비스"
-2. "서비스 또는 사용 사례" : "EC2", "지정된 서비스에 대한 사용 사례를 선택합니다. 사용 사례" : "EC2"
+2. "서비스 또는 사용 사례" : "EC2", "사용 사례" : "EC2"
 3. "권한 정책" : "AdministratorAccess"
 4. "역할 이름" : "AdministratorAccess-EC2-Role"
 
@@ -62,10 +62,10 @@ S3 버킷 폴더 안에 배포 파일 생성하기 (Amazon S3 > 버킷 > my-data
 "data/"
 1. "data.csv" 업로드 하기
 
-역할 생성하기 (IAM > 역할)
+Lambda 역할 생성하기 (IAM > 역할)
 "역할 생성"
 1. "신뢰할 수 있는 엔터티 유형" : "AWS 서비스"
-2. "서비스 또는 사용 사례" : "Lambda", "지정된 서비스에 대한 사용 사례를 선택합니다. 사용 사례" : "Lambda"
+2. "서비스 또는 사용 사례" : "Lambda", "사용 사례" : "Lambda"
 3. "권한 정책" : "AdministratorAccess"
 4. "역할 이름" : "AdministratorAccess-Lambda-Role"
 
@@ -85,13 +85,13 @@ Lambda 함수에서 트리거 생성하기 (Lambda > 함수 > data-function)
 4. "접두사" : "data/"
 5. "접미사" : ".csv"
 
-Lambda 함수에서 코드 소스 수정하기 (Lambda > 함수 > data-function)
+Lambda 함수에서 배포파일 코드 소스 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "코드 소스"
 1. "data-function.py" 파일 수정하기
-2. "script_location = 's3://my-data-s3-101/script/script.py'" : "script_location = 's3://my-data-s3-<비번호>/script/script.py'" 이렇게 수정하기
+2. "s3://my-data-s3-101/script/script.py" : "s3://my-data-s3-<비번호>/script/script.py" 이렇게 수정하기
 3. 수정한 파일을 복사하여 Lambda 함수 코드 소스에 붙여넣기
 
-Lambda 함수에서 코드 소스 이름 수정하기 (Lambda > 함수 > data-function)
+Lambda 함수에서 배포파일 코드 소스 이름 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "코드 소스"
 1. "lambda_function.py" : "data-function.py" 로 이름 수정하기
 
@@ -103,8 +103,30 @@ Lambda 함수에서 제한 시간 1분으로 수정하기 (Lambda > 함수 > dat
 "구성" -> "일반 구성" -> "편집"
 1. "제한 시간" : "1분"
 
+Glue job 역할 생성하기 (IAM > 역할)
+"역할 생성"
+1. "신뢰할 수 있는 엔터티 유형" : "AWS 서비스"
+2. "서비스 또는 사용 사례" : "Glue", "사용 사례" : "Glue"
+3. "권한 정책" : "AdministratorAccess"
+4. "역할 이름" : "AdministratorAccess-Glue-Role"
+
 Glue job 생성하기 (AWS Glue > Jobs)
 "ETL jobs" -> "Create job" -> "Script editor"
+1. "Engine" : "Spark"
+2. "Options" : "Start fresh"
+
+Glue job 생성하기, 코드 수정하기 ("Script", "Job details", "Runs", "Data quality", "Schedules", "Version Control")
+"Script"
+1. "script.py" 배포파일 복사하여 "script"에 붙여넣기
+2. "s3://my-data-s3-101/data/data.csv" : "s3://my-data-s3-<비번호>/data/data.csv" 이렇게 수정하기\
+3. "s3://my-data-s3-101/output/" : "s3://my-data-s3-<비번호>/output/" 이렇게 수정하기
+
+Glue job 생성하기 ("Script", "Job details", "Runs", "Data quality", "Schedules", "Version Control")
+"Job details"
+1. "Name" : "my-glue-job"
+2. "IAM Role" : "AdministratorAccess-Glue-Role"
+3. "Script filename" : "script.py"
+4. "Script path" : "s3://my-data-s3-<비번호>/script/"
 
 
 
