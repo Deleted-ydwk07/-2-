@@ -128,8 +128,20 @@ Glue job 생성하기 ("Script", "Job details", "Runs", "Data quality", "Schedul
 3. "Script filename" : "script.py"
 4. "Script path" : "s3://my-data-s3-<비번호>/script/"
 
+Glue 생성하기 (AWS Glue > Databases)
+"Add database"
+1. "Name" : "my-database"
 
-
+Crawlers 생성하기 (AWS Glue > Crawlers)
+"Create crawler"
+1. "Name" : "convert-crawler"
+2. "Data source configuration" : "Not yet"
+3. "Data sources" : "Add a data source"
+4. "S3 path" : "s3://my-data-s3-5321/output/"
+5. "Subsequent crawler runs" : "Crawl all sub-folders"
+6. "Existing IAM role" : "AdministratorAccess-Glue-Role"
+7. "Target database" : "my-database"
+8. "Table name prefix" : "convert_"
 
 
 
