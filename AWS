@@ -188,13 +188,13 @@ Athena 생성하기 (Amazon Athena > 쿼리 편집기)
 select count(*) from convert_output
 where sex='boy' and year between '1932' and '1967'
 3. "실행"을 누른다
-4. "결과" : "36000"
+4. "결과" : "36000" (결과가 다르면 Glue jobs 다 지우고 한번 실행하기)
 5. "Location of query result" : "s3://my-data-s3-<비번호>/woman/"
 6. "편집기"에 아래 내용을 복사하고 붙여넣는다
 select count(*) from convert_output
 where sex='girl' and year like '20%'
 7. "실행"을 누른다
-8. "결과" : "9000"
+8. "결과" : "9000" (결과가 다르면 Glue jobs 다 지우고 한번 실행하기)
 9. "S3"에 들어가서 "man"과 "woman" 폴더 생성 확인하기
 
 SQS 생성하기 (Amazon SQS > 대기열)
