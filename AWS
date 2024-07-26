@@ -172,7 +172,14 @@ Crawlers 생성하기 (AWS Glue > Crawlers)
 6. "Existing IAM role" : "AdministratorAccess-Glue-Role"
 7. "Target database" : "my-database"
 8. "Table name prefix" : "convert_"
-9. "Tables" 생성 확인하기
+
+Crawlers 실행하기 (AWS Glue > Crawlers > convert-crawler) ("Crawler runs", "Schedule" "Data sources", "Classifiers", "Tags")
+"Crawler runs"
+1. "Run crawler" 누른다
+
+Tables 생성 확인하기 ("AWS Glue" > "Tables")
+"Tables"
+1. "Tables" 생성 확인
 
 Athena 생성하기 (Amazon Athena > 쿼리 편집기)
 "설정" -> "관리"
