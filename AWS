@@ -207,7 +207,7 @@ EventBridge 생성하기 (Amazon EventBridge > 규칙)
 1. "이름" : "s3-upload-rule"
 2. "규칙 유형" : "이벤트 패턴이 있는 규칙"
 3. "방법" : "사용자 지정 패턴(JSON 편집기)"
-4. "이벤트 패턴" : 아래 내용을 복사하고 붙여넣는다
+4. "이벤트 패턴" : 아래 내용을 복사하고 붙여넣는다 (수정하기)
 {
   "source": ["aws.s3"],
   "detail-type": ["Object Created"],
