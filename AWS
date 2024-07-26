@@ -167,7 +167,7 @@ Crawlers 생성하기 (AWS Glue > Crawlers)
 1. "Name" : "convert-crawler"
 2. "Data source configuration" : "Not yet"
 3. "Data sources" : "Add a data source"
-4. "S3 path" : "s3://my-data-s3-5321/output/"
+4. "S3 path" : "s3://my-data-s3-<비번호>/output/" (수정하기)
 5. "Subsequent crawler runs" : "Crawl all sub-folders"
 6. "Existing IAM role" : "AdministratorAccess-Glue-Role"
 7. "Target database" : "my-database"
