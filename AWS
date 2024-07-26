@@ -115,7 +115,7 @@ Lambda 함수에서 테스트 이벤트 생성하기 (Lambda > 함수 > data-fun
     {
       "s3": {
         "bucket": {
-          "name": "my-data-s3-5321"
+          "name": "my-data-s3-<비번호>"
         },
         "object": {
           "key": "data/data.csv"
@@ -124,7 +124,8 @@ Lambda 함수에서 테스트 이벤트 생성하기 (Lambda > 함수 > data-fun
     }
   ]
 }
-4. "테스트" 누르기
+4. 코드 수정하기
+5. "테스트" 누르기
 
 Glue job 역할 생성하기 (IAM > 역할)
 "역할 생성"
