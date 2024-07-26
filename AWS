@@ -237,7 +237,7 @@ where sex='boy' and year between '1932' and '1967'
 3. "다시 실행" 누르기
 4. "SQS"에 접속하여 (Amazon SQS > 대기열 > my-queue)
 5. "메시지 전송 및 수신" 누르기 (Amazon SQS > 대기열 > my-queue > 메시지 전송 및 수신)
-6. "메시지 폴링" 누르기
+6. "메시지 폴링" 누르기 ("메시지 폴링" 했는데 안될경우 : "Crawlers" 다시 실행)
 
 대시보드 생성하기 (CloudWatch > Dashboards)
 "대시보드 생성"
