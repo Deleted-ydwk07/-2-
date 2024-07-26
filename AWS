@@ -247,20 +247,6 @@ where sex='girl' and year like '20%'
 9. "메시지 폴링" 누르기 ("메시지 폴링" 했는데 안될경우 : "Crawlers" 다시 실행)
 10. "메시지" 4개가 떠야함
 
-대시보드 생성하기 (CloudWatch > Dashboards)
-"대시보드 생성"
-1. "대시보드 이름" : "my-dashboard"
-2. "위젯 유형" : "행"
-3. "FunctionName" : "data-function", "리소스 (Resource)" : "data-function", "지표 이름" : "ConcurrentExecutions" 체크
-4. "위젯 생성" 누르기
-5. "..." 세로로 되있는거 누르기
-6. "편집" 누르기
-7. "통계" : "평균", "기간" : "1분"
-8. "ConcurrentExecutions" 마우스 갖다 대기
-9. "제목 편집" 누르기
-10. "ConcurrentExecutions"을 "Lambda_Execution"으로 수정하기
-11. "저장" 누르기
-
 대시보드, 지표 생성하기 (CloudWatch > Dashboards)
 "대시보드 생성"
 1. "대시보드 이름" : "my-dashboard"
@@ -291,22 +277,3 @@ where sex='girl' and year like '20%'
 10. "제목 편집" 누르기
 11. "NumberOfMessagesReceived"를 "SQS_Received"로 수정하기
 12. "저장" 누르기
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
