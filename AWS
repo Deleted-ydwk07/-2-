@@ -277,3 +277,5 @@ where sex='girl' and year like '20%'
 10. "제목 편집" 누르기
 11. "NumberOfMessagesReceived"를 "SQS_Received"로 수정하기
 12. "저장" 누르기
+
+"저장" 까먹지 않기
