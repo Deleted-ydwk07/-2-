@@ -141,7 +141,7 @@ Glue job 생성하기 (AWS Glue > Jobs)
 
 Glue job 생성하기, 코드 수정하기 ("Script", "Job details", "Runs", "Data quality", "Schedules", "Version Control")
 "Script"
-1. "script.py" 배포파일 복사하여 "script"에 붙여넣기
+1. "script.py" 배포파일을 메모장에 옮겨서 수정 후 복사하여 "script"에 붙여넣기 (중요 이렇게 안하면 수정 안됨)
 2. "s3://my-data-s3-101/data/data.csv" : "s3://my-data-s3-<비번호>/data/data.csv" 이렇게 수정하기\
 3. "s3://my-data-s3-101/output/" : "s3://my-data-s3-<비번호>/output/" 이렇게 수정하기
 
