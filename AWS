@@ -95,6 +95,7 @@ Lambda 함수에서 배포파일 코드 소스 수정하기 (Lambda > 함수 > d
 1. "data-function.py" 파일 수정하기
 2. "s3://my-data-s3-101/script/script.py" : "s3://my-data-s3-<비번호>/script/script.py" 이렇게 수정하기
 3. 수정한 파일을 복사하여 Lambda 함수 코드 소스에 붙여넣기
+4. "Deploy" 잊지 않기
 
 Lambda 함수에서 배포파일 코드 소스 이름 수정하기 (Lambda > 함수 > data-function)
 "코드" -> "코드 소스"
