@@ -161,9 +161,10 @@ Glue job 생성하기 ("Script", "Job details", "Runs", "Data quality", "Schedul
 
 Glue job 실행하기 ("Script", "Job details", "Runs", "Data quality", "Schedules", "Version Control")
 "Runs"
-1. "Run" 누르기
-2. "S3"에 있는 "output" 폴더 안 확인하기
-3. "S3"에 있는 "script" 폴더 안 확인하기
+1. "Save" 누르기
+2. "Run" 누르기
+3. "S3"에 있는 "output" 폴더 안 확인하기
+4. "S3"에 있는 "script" 폴더 안 확인하기
 
 Database 생성하기 (AWS Glue > Databases)
 "Add database"
